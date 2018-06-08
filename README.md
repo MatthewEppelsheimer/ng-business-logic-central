@@ -171,7 +171,7 @@ Run `ng build business-logic-central --prod` to build the library. The build art
 npm --no-git-tag-version -f version [major|minor|patch]
 
 # build
-ng build business-logic-central
+ng build business-logic-central --prod
 
 # switch to built package
 cd dist/ng-business-logic-central/
