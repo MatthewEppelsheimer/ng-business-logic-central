@@ -40,7 +40,7 @@ The module also uses defines the `BusinessLogicEvent` TypeScript `interface` for
 
 ### Including in your application ###
 
-1. Include this module in your Angular 6.x or later project with `npm install --save 'business-logic-central'`.
+1. Include this module in your Angular 6.x or later project with `npm install --save 'ng-business-logic-central'`.
 2. Where needed in your application's code, import the following from the module:
 
 ```typescript
@@ -161,14 +161,22 @@ Nice-to-have features:
 
 ### Build ###
 
-Run `ng build business-logic-central` to build the library. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build business-logic-central --prod` to build the library. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ### Publish updates to NPM ###
 
 ```bash
+# manually increment version in package.json
+# avoid git tags since we're publishing from `dist/` later
+npm --no-git-tag-version -f version [major|minor|patch]
+
+# build
 ng build business-logic-central
-cd cd dist/
-npm update VERSION
+
+# switch to built package
+cd dist/ng-business-logic-central/
+
+# publish update npm
 npm publish
 ```
 
