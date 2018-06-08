@@ -4,6 +4,8 @@ A system for managing event-driven conditional business logic within an Angular 
 
 **Requires Angular 6.0.0 or later.**
 
+**License: GPL 2.0 or later.**
+
 ## What It Does ##
 
 This library supports creating "Business Logic Instructions" that drive changes if custom application state conditions are met, registering them to events, and triggering events when appropriate. Instructions are supplied by you and can have completely custom conditionals, directives, and whatever behavior you'd like. It is very flexible. 
