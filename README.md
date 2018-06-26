@@ -43,13 +43,32 @@ The module also uses defines the `BusinessLogicEvent` TypeScript `interface` for
 ### Including in your application ###
 
 1. Include this module in your Angular 6.x or later project with `npm install --save 'ng-business-logic-central'`.
-2. Where needed in your application's code, import the following from the module:
+2. Import the module into your root module's `imports` metadata.
+3. Where needed in your application's components and services, import items provided by the module:
+
+Importing this module into your root module looks a little something like:
+
+```typescript
+// excerpt from e.g. your root module, e.g. `AppModule`
+import { BusinessLogicCentralModule } from 'ng-business-logic-central';
+
+@NgModule({
+	imports: [
+		BrowserModule,
+		BusinessLogicCentralModule,
+	  ]
+})
+export class AppModule { }
+
+```
+
+Importing items provided by the module looks a little something like:
 
 ```typescript
 import {
 	BusinessLogicInstruction,
 	BusinessLogicCentralService
-} from 'business-logic-central';
+} from 'ng-business-logic-central';
 ```
 
 ### Create Business Logic Instructions ###
@@ -59,7 +78,7 @@ Your Business Logic Instructions must be functions (or object methods on a servi
 Here's an example of an instruction in a `my-business-logic-instructions.ts` file:
 
 ```typescript
-import { BusinessLogicInstruction } from 'business-logic-central'
+import { BusinessLogicInstruction } from 'ng-business-logic-central'
 
 /*
 This BusienssLogicInstruction implements the business requirement
